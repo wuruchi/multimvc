@@ -1,0 +1,159 @@
+﻿@model IEnumerable<WebMultimediaMvc.DAL.Respuesta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreUsuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreUsuarioModificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlagRespuesta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsuarioFlagPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaFlagPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreFlagPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsuarioEstadoPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEstadoPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreEstadoPor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadVista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScoreObtenido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadComentario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumenEdicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VisitanteIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadEdicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuarioModificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaModificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreUsuarioModificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlagRespuesta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsuarioFlagPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaFlagPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreFlagPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsuarioEstadoPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEstadoPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreEstadoPor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadVista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScoreObtenido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadComentario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumenEdicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VisitanteIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadEdicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tema.Titulo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdRespuesta }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdRespuesta }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdRespuesta })
+        </td>
+    </tr>
+}
+
+</table>

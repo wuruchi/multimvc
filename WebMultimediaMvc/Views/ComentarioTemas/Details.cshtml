@@ -1,0 +1,114 @@
+﻿@model WebMultimediaMvc.DAL.ComentarioTema
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ComentarioTema</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ComentarioTexto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComentarioTexto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComentarioTextoHtml)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComentarioTextoHtml)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScoreObtenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScoreObtenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdComentario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

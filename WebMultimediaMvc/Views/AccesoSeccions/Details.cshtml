@@ -1,0 +1,114 @@
+﻿@model WebMultimediaMvc.DAL.AccesoSeccion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccesoSeccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acceso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acceso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Crear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Crear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marcado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marcado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desactivado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desactivado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RolSistema.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RolSistema.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdAccesoSeccion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

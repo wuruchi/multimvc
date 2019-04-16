@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4533721a6b6941ae89fc494fa9da5872" Name="Diagram1">
+        <EntityTypeShape EntityType="SalesERPDBModel.AccesoSeccion" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.ComentarioRespuesta" Width="1.5" PointX="15.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.ComentarioTema" Width="1.5" PointX="13.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.LogActividad" Width="1.5" PointX="8.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.Respuesta" Width="1.5" PointX="13.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.RespuestaContenido" Width="1.5" PointX="15.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.RolSistema" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.RolSistemaCompany" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.Seccion" Width="1.5" PointX="3" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.Tema" Width="1.5" PointX="11.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.TemaContenido" Width="1.5" PointX="13.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.TemaEdicion" Width="1.5" PointX="13.5" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.TipoSeccion" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.TipoTema" Width="1.5" PointX="9" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.ValoracionRespuesta" Width="1.5" PointX="15.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesERPDBModel.ValoracionTema" Width="1.5" PointX="13.5" PointY="29.375" IsExpanded="true" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Modulo_AccesoModulo" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Rol_AccesoModulo" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Respuesta_ComentarioRespuesta" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_ComentarioTema" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Modulo_Log" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Rol_Log" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Rol_Sistema_Log" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_Log" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Repuesta_ValoracionRespuesta" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Respuesta_RespuestaContenido" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_Respuesta" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Rol_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Seccion_Tema" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_TipoSeccion_Seccion" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_TemaContenido" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_TemaEdicion" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_Tema_ValoracionTema" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesERPDBModel.FK_TipoTema_Tema" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

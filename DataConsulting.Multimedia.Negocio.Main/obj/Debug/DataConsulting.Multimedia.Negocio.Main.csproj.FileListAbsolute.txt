@@ -1,0 +1,12 @@
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Negocio.Main.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Negocio.Main.pdb
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Entidades.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Negocio.Contexto.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\EntityFramework.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\EntityFramework.SqlServer.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DocumentFormat.OpenXml.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Entidades.pdb
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\bin\Debug\DataConsulting.Multimedia.Negocio.Contexto.pdb
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\obj\Debug\DataConsulting.Multimedia.Negocio.Main.csprojResolveAssemblyReference.cache
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\obj\Debug\DataConsulting.Multimedia.Negocio.Main.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Negocio.Main\obj\Debug\DataConsulting.Multimedia.Negocio.Main.pdb

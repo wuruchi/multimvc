@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesERPDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccesoSeccion">
+    <Key>
+      <PropertyRef Name="IdAccesoSeccion" />
+    </Key>
+    <Property Name="IdAccesoSeccion" Type="int" Nullable="false" />
+    <Property Name="IdSeccion" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="UsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="Acceso" Type="bit" Nullable="false" />
+    <Property Name="Crear" Type="bit" Nullable="false" />
+    <Property Name="Marcado" Type="bit" Nullable="false" />
+    <Property Name="Edicion" Type="bit" Nullable="false" />
+    <Property Name="Desactivado" Type="bit" Nullable="false" />
+    <Property Name="IdRolSistema" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComentarioRespuesta">
+    <Key>
+      <PropertyRef Name="IdComentarioRespuesta" />
+    </Key>
+    <Property Name="IdComentarioRespuesta" Type="int" Nullable="false" />
+    <Property Name="IdRespuesta" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="smallint" Nullable="false" />
+    <Property Name="ComentarioTexto" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ComentarioTextoHtml" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioCreador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioModificador" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComentarioTema">
+    <Key>
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdComentario" Type="int" Nullable="false" />
+    <Property Name="IdTema" Type="int" Nullable="false" />
+    <Property Name="ComentarioTexto" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ComentarioTextoHtml" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="smallint" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioCreador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioModificador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogActividad">
+    <Key>
+      <PropertyRef Name="IdLogActividad" />
+    </Key>
+    <Property Name="IdLogActividad" Type="int" Nullable="false" />
+    <Property Name="IdRolSistema" Type="smallint" Nullable="false" />
+    <Property Name="IdRolSisCompany" Type="int" Nullable="false" />
+    <Property Name="NombreModulo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="NombrePagina" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Accion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="IdSeccion" Type="int" />
+    <Property Name="IdTema" Type="int" />
+  </EntityType>
+  <EntityType Name="Respuesta">
+    <Key>
+      <PropertyRef Name="IdRespuesta" />
+    </Key>
+    <Property Name="IdRespuesta" Type="int" Nullable="false" />
+    <Property Name="IdTema" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioCreador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreUsuarioModificador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FlagRespuesta" Type="tinyint" Nullable="false" />
+    <Property Name="UsuarioFlagPor" Type="smallint" Nullable="false" />
+    <Property Name="FechaFlagPor" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreFlagPor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="UsuarioEstadoPor" Type="smallint" Nullable="false" />
+    <Property Name="FechaEstadoPor" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreEstadoPor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CantidadVista" Type="smallint" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="smallint" Nullable="false" />
+    <Property Name="CantidadComentario" Type="smallint" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VisitanteIP" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RespuestaContenido">
+    <Key>
+      <PropertyRef Name="IdRespuestaContenido" />
+    </Key>
+    <Property Name="IdRespuestaContenido" Type="int" Nullable="false" />
+    <Property Name="IdRespuesta" Type="int" Nullable="false" />
+    <Property Name="Contenido" Type="text" Nullable="false" />
+    <Property Name="ContenidHtml" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RolSistema">
+    <Key>
+      <PropertyRef Name="IdRolSistema" />
+    </Key>
+    <Property Name="IdRolSistema" Type="smallint" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="EsBase" Type="bit" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RolSistemaCompany">
+    <Key>
+      <PropertyRef Name="IdRolSisCompany" />
+    </Key>
+    <Property Name="IdRolSisCompany" Type="int" Nullable="false" />
+    <Property Name="IdRolSistema" Type="smallint" Nullable="false" />
+    <Property Name="IdCompany" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Simbolo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ScoreTotal" Type="smallint" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="IdSeccion" />
+    </Key>
+    <Property Name="IdSeccion" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdTipoSeccion" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Tema">
+    <Key>
+      <PropertyRef Name="IdTema" />
+    </Key>
+    <Property Name="IdTema" Type="int" Nullable="false" />
+    <Property Name="IdTipoTema" Type="smallint" Nullable="false" />
+    <Property Name="IdSeccion" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CantidadComentario" Type="smallint" Nullable="false" />
+    <Property Name="CantidadRespuesta" Type="smallint" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="smallint" Nullable="false" />
+    <Property Name="CantidadVista" Type="smallint" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdUsuarioEstadoPor" Type="smallint" Nullable="false" />
+    <Property Name="FechaEstadoPor" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreEstadoPor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FlagTema" Type="tinyint" Nullable="false" />
+    <Property Name="IdUsuarioFlagPor" Type="smallint" Nullable="false" />
+    <Property Name="FechaFlagPor" Type="smalldatetime" Nullable="false" />
+    <Property Name="NombreFlagPor" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="tinyint" Nullable="false" />
+    <Property Name="NombreUsuarioCreador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="NombreUsuarioModificador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="Tag1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag4" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag5" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tags" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="VisitanteIP" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemaContenido">
+    <Key>
+      <PropertyRef Name="IdTemaContenido" />
+    </Key>
+    <Property Name="IdTemaContenido" Type="int" Nullable="false" />
+    <Property Name="IdTema" Type="int" Nullable="false" />
+    <Property Name="Contenido" Type="text" Nullable="false" />
+    <Property Name="ContenidoHtml" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemaEdicion">
+    <Key>
+      <PropertyRef Name="IdTemaEdicion" />
+    </Key>
+    <Property Name="IdTemaEdicion" Type="int" Nullable="false" />
+    <Property Name="IdTema" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Contenido" Type="text" Nullable="false" />
+    <Property Name="ContenidoHTML" Type="text" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="Tag1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag4" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tag5" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tags" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoSeccion">
+    <Key>
+      <PropertyRef Name="IdTipoSeccion" />
+    </Key>
+    <Property Name="IdTipoSeccion" Type="smallint" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoTema">
+    <Key>
+      <PropertyRef Name="IdTipoTema" />
+    </Key>
+    <Property Name="IdTipoTema" Type="smallint" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Estado" Type="smallint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ValoracionRespuesta">
+    <Key>
+      <PropertyRef Name="IdValoracionRespuesta" />
+    </Key>
+    <Property Name="IdValoracionRespuesta" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="tinyint" Nullable="false" />
+    <Property Name="TipoMarca" Type="tinyint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdRespuesta" Type="int" />
+  </EntityType>
+  <EntityType Name="ValoracionTema">
+    <Key>
+      <PropertyRef Name="IdValoracionTema" />
+    </Key>
+    <Property Name="IdValoracionTema" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="tinyint" Nullable="false" />
+    <Property Name="TipoMarca" Type="tinyint" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="smallint" Nullable="false" />
+    <Property Name="FechaCreacion" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdTema" Type="int" />
+  </EntityType>
+  <Association Name="FK_Modulo_AccesoModulo">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="1" />
+    <End Role="AccesoSeccion" Type="Self.AccesoSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="AccesoSeccion">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Log">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="0..1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Repuesta_ValoracionRespuesta">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="0..1" />
+    <End Role="ValoracionRespuesta" Type="Self.ValoracionRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="ValoracionRespuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_ComentarioRespuesta">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+    <End Role="ComentarioRespuesta" Type="Self.ComentarioRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="ComentarioRespuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_RespuestaContenido">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+    <End Role="RespuestaContenido" Type="Self.RespuestaContenido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="RespuestaContenido">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_AccesoModulo">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="AccesoSeccion" Type="Self.AccesoSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="AccesoSeccion">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Company">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="RolSistemaCompany" Type="Self.RolSistemaCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="RolSistemaCompany">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Log">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Sistema_Log">
+    <End Role="RolSistemaCompany" Type="Self.RolSistemaCompany" Multiplicity="1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistemaCompany">
+        <PropertyRef Name="IdRolSisCompany" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdRolSisCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seccion_Tema">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="1" />
+    <End Role="Tema" Type="Self.Tema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="Tema">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_ComentarioTema">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="ComentarioTema" Type="Self.ComentarioTema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="ComentarioTema">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_Log">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="0..1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_Respuesta">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="Respuesta">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_TemaContenido">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="TemaContenido" Type="Self.TemaContenido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="TemaContenido">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_TemaEdicion">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="TemaEdicion" Type="Self.TemaEdicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="TemaEdicion">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_ValoracionTema">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="0..1" />
+    <End Role="ValoracionTema" Type="Self.ValoracionTema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="ValoracionTema">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSeccion_Seccion">
+    <End Role="TipoSeccion" Type="Self.TipoSeccion" Multiplicity="0..1" />
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSeccion">
+        <PropertyRef Name="IdTipoSeccion" />
+      </Principal>
+      <Dependent Role="Seccion">
+        <PropertyRef Name="IdTipoSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoTema_Tema">
+    <End Role="TipoTema" Type="Self.TipoTema" Multiplicity="1" />
+    <End Role="Tema" Type="Self.Tema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTema">
+        <PropertyRef Name="IdTipoTema" />
+      </Principal>
+      <Dependent Role="Tema">
+        <PropertyRef Name="IdTipoTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SalesERPDBModelStoreContainer">
+    <EntitySet Name="AccesoSeccion" EntityType="Self.AccesoSeccion" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="ComentarioRespuesta" EntityType="Self.ComentarioRespuesta" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="ComentarioTema" EntityType="Self.ComentarioTema" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="LogActividad" EntityType="Self.LogActividad" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="Respuesta" EntityType="Self.Respuesta" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="RespuestaContenido" EntityType="Self.RespuestaContenido" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="RolSistema" EntityType="Self.RolSistema" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="RolSistemaCompany" EntityType="Self.RolSistemaCompany" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="Seccion" EntityType="Self.Seccion" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="Tema" EntityType="Self.Tema" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="TemaContenido" EntityType="Self.TemaContenido" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="TemaEdicion" EntityType="Self.TemaEdicion" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="TipoSeccion" EntityType="Self.TipoSeccion" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="TipoTema" EntityType="Self.TipoTema" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="ValoracionRespuesta" EntityType="Self.ValoracionRespuesta" Schema="Multimedia" store:Type="Tables" />
+    <EntitySet Name="ValoracionTema" EntityType="Self.ValoracionTema" Schema="Multimedia" store:Type="Tables" />
+    <AssociationSet Name="FK_Modulo_AccesoModulo" Association="Self.FK_Modulo_AccesoModulo">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="AccesoSeccion" EntitySet="AccesoSeccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Log" Association="Self.FK_Modulo_Log">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Repuesta_ValoracionRespuesta" Association="Self.FK_Repuesta_ValoracionRespuesta">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="ValoracionRespuesta" EntitySet="ValoracionRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_ComentarioRespuesta" Association="Self.FK_Respuesta_ComentarioRespuesta">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="ComentarioRespuesta" EntitySet="ComentarioRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_RespuestaContenido" Association="Self.FK_Respuesta_RespuestaContenido">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="RespuestaContenido" EntitySet="RespuestaContenido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_AccesoModulo" Association="Self.FK_Rol_AccesoModulo">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="AccesoSeccion" EntitySet="AccesoSeccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Company" Association="Self.FK_Rol_Company">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="RolSistemaCompany" EntitySet="RolSistemaCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Log" Association="Self.FK_Rol_Log">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Sistema_Log" Association="Self.FK_Rol_Sistema_Log">
+      <End Role="RolSistemaCompany" EntitySet="RolSistemaCompany" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seccion_Tema" Association="Self.FK_Seccion_Tema">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="Tema" EntitySet="Tema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_ComentarioTema" Association="Self.FK_Tema_ComentarioTema">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="ComentarioTema" EntitySet="ComentarioTema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_Log" Association="Self.FK_Tema_Log">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_Respuesta" Association="Self.FK_Tema_Respuesta">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="Respuesta" EntitySet="Respuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_TemaContenido" Association="Self.FK_Tema_TemaContenido">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="TemaContenido" EntitySet="TemaContenido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_TemaEdicion" Association="Self.FK_Tema_TemaEdicion">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="TemaEdicion" EntitySet="TemaEdicion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_ValoracionTema" Association="Self.FK_Tema_ValoracionTema">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="ValoracionTema" EntitySet="ValoracionTema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSeccion_Seccion" Association="Self.FK_TipoSeccion_Seccion">
+      <End Role="TipoSeccion" EntitySet="TipoSeccion" />
+      <End Role="Seccion" EntitySet="Seccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoTema_Tema" Association="Self.FK_TipoTema_Tema">
+      <End Role="TipoTema" EntitySet="TipoTema" />
+      <End Role="Tema" EntitySet="Tema" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

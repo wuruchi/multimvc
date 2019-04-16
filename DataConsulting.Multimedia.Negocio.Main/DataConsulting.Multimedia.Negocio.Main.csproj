@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40C47586-1312-4FC6-B864-F02B60FD6628}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataConsulting.Multimedia.Negocio.Main</RootNamespace>
+    <AssemblyName>DataConsulting.Multimedia.Negocio.Main</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\UsefulDLL\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\UsefulDLL\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessRules\AccesoSeccionBR.cs" />
+    <Compile Include="BusinessRules\ComentarioRespuestaBR.cs" />
+    <Compile Include="BusinessRules\ComentarioTemaBR.cs" />
+    <Compile Include="BusinessRules\LogActividadBR.cs" />
+    <Compile Include="BusinessRules\RespuestaBR.cs" />
+    <Compile Include="BusinessRules\RespuestaContenidoBR.cs" />
+    <Compile Include="BusinessRules\RolSistemaBR.cs" />
+    <Compile Include="BusinessRules\RolSistemaCompanyBR.cs" />
+    <Compile Include="BusinessRules\SeccionBR.cs" />
+    <Compile Include="BusinessRules\TemaBR.cs" />
+    <Compile Include="BusinessRules\TemaContenidoBR.cs" />
+    <Compile Include="BusinessRules\TemaEdicionBR.cs" />
+    <Compile Include="BusinessRules\TipoSeccionBR.cs" />
+    <Compile Include="BusinessRules\TipoTemaBR.cs" />
+    <Compile Include="BusinessRules\ValoracionRespuestaBR.cs" />
+    <Compile Include="BusinessRules\ValoracionTemaBR.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccess\AccesoSeccionDA.cs" />
+    <Compile Include="DataAccess\ComentarioRespuestaDA.cs" />
+    <Compile Include="DataAccess\ComentarioTemaDA.cs" />
+    <Compile Include="DataAccess\LogActividadDA.cs" />
+    <Compile Include="DataAccess\RespuestaDA.cs" />
+    <Compile Include="DataAccess\RespuestaContenidoDA.cs" />
+    <Compile Include="DataAccess\RolSistemaDA.cs" />
+    <Compile Include="DataAccess\RolSistemaCompanyDA.cs" />
+    <Compile Include="DataAccess\SeccionDA.cs" />
+    <Compile Include="DataAccess\TemaDA.cs" />
+    <Compile Include="DataAccess\TemaContenidoDA.cs" />
+    <Compile Include="DataAccess\TemaEdicionDA.cs" />
+    <Compile Include="DataAccess\TipoSeccionDA.cs" />
+    <Compile Include="DataAccess\TipoTemaDA.cs" />
+    <Compile Include="DataAccess\ValoracionRespuestaDA.cs" />
+    <Compile Include="DataAccess\ValoracionTemaDA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataConsulting.Multimedia.Entidades\DataConsulting.Multimedia.Entidades.csproj">
+      <Project>{b121468d-dadf-4273-9f7f-f52a7871b020}</Project>
+      <Name>DataConsulting.Multimedia.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataConsulting.Multimedia.Negocio.Contexto\DataConsulting.Multimedia.Negocio.Contexto.csproj">
+      <Project>{2a65d187-de6d-4d42-af67-e572eab8803e}</Project>
+      <Name>DataConsulting.Multimedia.Negocio.Contexto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

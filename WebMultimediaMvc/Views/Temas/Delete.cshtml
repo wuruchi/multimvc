@@ -1,0 +1,264 @@
+﻿@model WebMultimediaMvc.DAL.Tema
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tema</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadComentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadComentario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadRespuesta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadRespuesta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScoreObtenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScoreObtenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadVista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadVista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumenEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumenEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagTema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagTema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitanteIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitanteIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seccion.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seccion.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoTema.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoTema.Descripcion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

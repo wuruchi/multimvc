@@ -1,0 +1,42 @@
+﻿@model WebMultimediaMvc.DAL.TemaContenido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TemaContenido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContenidoHtml)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContenidoHtml)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTemaContenido }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

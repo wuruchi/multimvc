@@ -1,0 +1,58 @@
+﻿@model WebMultimediaMvc.DAL.ValoracionRespuesta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ValoracionRespuesta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMarca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMarca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Respuesta.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Respuesta.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdValoracionRespuesta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

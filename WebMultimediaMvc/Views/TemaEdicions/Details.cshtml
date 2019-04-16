@@ -1,0 +1,130 @@
+﻿@model WebMultimediaMvc.DAL.TemaEdicion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TemaEdicion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContenidoHTML)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContenidoHTML)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumenEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumenEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTemaEdicion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

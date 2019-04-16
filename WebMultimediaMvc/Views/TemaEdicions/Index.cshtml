@@ -1,0 +1,111 @@
+﻿@model IEnumerable<WebMultimediaMvc.DAL.TemaEdicion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContenidoHTML)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tag5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tags)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResumenEdicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contenido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContenidoHTML)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuarioModificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaModificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tag5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tags)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumenEdicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tema.Titulo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdTemaEdicion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdTemaEdicion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdTemaEdicion })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SalesERPDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AccesoSeccion">
+    <Key>
+      <PropertyRef Name="IdAccesoSeccion" />
+    </Key>
+    <Property Name="IdAccesoSeccion" Type="Int32" Nullable="false" />
+    <Property Name="IdSeccion" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="UsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="Acceso" Type="Boolean" Nullable="false" />
+    <Property Name="Crear" Type="Boolean" Nullable="false" />
+    <Property Name="Marcado" Type="Boolean" Nullable="false" />
+    <Property Name="Edicion" Type="Boolean" Nullable="false" />
+    <Property Name="Desactivado" Type="Boolean" Nullable="false" />
+    <Property Name="IdRolSistema" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Seccion" Relationship="Self.FK_Modulo_AccesoModulo" FromRole="AccesoSeccion" ToRole="Seccion" />
+    <NavigationProperty Name="RolSistema" Relationship="Self.FK_Rol_AccesoModulo" FromRole="AccesoSeccion" ToRole="RolSistema" />
+  </EntityType>
+  <EntityType Name="ComentarioRespuesta">
+    <Key>
+      <PropertyRef Name="IdComentarioRespuesta" />
+    </Key>
+    <Property Name="IdComentarioRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="Int16" Nullable="false" />
+    <Property Name="ComentarioTexto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComentarioTextoHtml" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioCreador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioModificador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Respuesta" Relationship="Self.FK_Respuesta_ComentarioRespuesta" FromRole="ComentarioRespuesta" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="ComentarioTema">
+    <Key>
+      <PropertyRef Name="IdComentario" />
+    </Key>
+    <Property Name="IdComentario" Type="Int32" Nullable="false" />
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="ComentarioTexto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ComentarioTextoHtml" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="Int16" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioCreador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioModificador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_ComentarioTema" FromRole="ComentarioTema" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="LogActividad">
+    <Key>
+      <PropertyRef Name="IdLogActividad" />
+    </Key>
+    <Property Name="IdLogActividad" Type="Int32" Nullable="false" />
+    <Property Name="IdRolSistema" Type="Int16" Nullable="false" />
+    <Property Name="IdRolSisCompany" Type="Int32" Nullable="false" />
+    <Property Name="NombreModulo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NombrePagina" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Accion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="IdSeccion" Type="Int32" />
+    <Property Name="IdTema" Type="Int32" />
+    <NavigationProperty Name="Seccion" Relationship="Self.FK_Modulo_Log" FromRole="LogActividad" ToRole="Seccion" />
+    <NavigationProperty Name="RolSistema" Relationship="Self.FK_Rol_Log" FromRole="LogActividad" ToRole="RolSistema" />
+    <NavigationProperty Name="RolSistemaCompany" Relationship="Self.FK_Rol_Sistema_Log" FromRole="LogActividad" ToRole="RolSistemaCompany" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_Log" FromRole="LogActividad" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="Respuesta">
+    <Key>
+      <PropertyRef Name="IdRespuesta" />
+    </Key>
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioCreador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreUsuarioModificador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FlagRespuesta" Type="Byte" Nullable="false" />
+    <Property Name="UsuarioFlagPor" Type="Int16" Nullable="false" />
+    <Property Name="FechaFlagPor" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreFlagPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="UsuarioEstadoPor" Type="Int16" Nullable="false" />
+    <Property Name="FechaEstadoPor" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreEstadoPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadVista" Type="Int16" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="Int16" Nullable="false" />
+    <Property Name="CantidadComentario" Type="Int16" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VisitanteIP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="ComentarioRespuesta" Relationship="Self.FK_Respuesta_ComentarioRespuesta" FromRole="Respuesta" ToRole="ComentarioRespuesta" />
+    <NavigationProperty Name="ValoracionRespuesta" Relationship="Self.FK_Repuesta_ValoracionRespuesta" FromRole="Respuesta" ToRole="ValoracionRespuesta" />
+    <NavigationProperty Name="RespuestaContenido" Relationship="Self.FK_Respuesta_RespuestaContenido" FromRole="Respuesta" ToRole="RespuestaContenido" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_Respuesta" FromRole="Respuesta" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="RespuestaContenido">
+    <Key>
+      <PropertyRef Name="IdRespuestaContenido" />
+    </Key>
+    <Property Name="IdRespuestaContenido" Type="Int32" Nullable="false" />
+    <Property Name="IdRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContenidHtml" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Respuesta" Relationship="Self.FK_Respuesta_RespuestaContenido" FromRole="RespuestaContenido" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="RolSistema">
+    <Key>
+      <PropertyRef Name="IdRolSistema" />
+    </Key>
+    <Property Name="IdRolSistema" Type="Int16" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EsBase" Type="Boolean" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="AccesoSeccion" Relationship="Self.FK_Rol_AccesoModulo" FromRole="RolSistema" ToRole="AccesoSeccion" />
+    <NavigationProperty Name="LogActividad" Relationship="Self.FK_Rol_Log" FromRole="RolSistema" ToRole="LogActividad" />
+    <NavigationProperty Name="RolSistemaCompany" Relationship="Self.FK_Rol_Company" FromRole="RolSistema" ToRole="RolSistemaCompany" />
+  </EntityType>
+  <EntityType Name="RolSistemaCompany">
+    <Key>
+      <PropertyRef Name="IdRolSisCompany" />
+    </Key>
+    <Property Name="IdRolSisCompany" Type="Int32" Nullable="false" />
+    <Property Name="IdRolSistema" Type="Int16" Nullable="false" />
+    <Property Name="IdCompany" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Simbolo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ScoreTotal" Type="Int16" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="LogActividad" Relationship="Self.FK_Rol_Sistema_Log" FromRole="RolSistemaCompany" ToRole="LogActividad" />
+    <NavigationProperty Name="RolSistema" Relationship="Self.FK_Rol_Company" FromRole="RolSistemaCompany" ToRole="RolSistema" />
+  </EntityType>
+  <EntityType Name="Seccion">
+    <Key>
+      <PropertyRef Name="IdSeccion" />
+    </Key>
+    <Property Name="IdSeccion" Type="Int32" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdTipoSeccion" Type="Int16" />
+    <NavigationProperty Name="AccesoSeccion" Relationship="Self.FK_Modulo_AccesoModulo" FromRole="Seccion" ToRole="AccesoSeccion" />
+    <NavigationProperty Name="LogActividad" Relationship="Self.FK_Modulo_Log" FromRole="Seccion" ToRole="LogActividad" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Seccion_Tema" FromRole="Seccion" ToRole="Tema" />
+    <NavigationProperty Name="TipoSeccion" Relationship="Self.FK_TipoSeccion_Seccion" FromRole="Seccion" ToRole="TipoSeccion" />
+  </EntityType>
+  <EntityType Name="Tema">
+    <Key>
+      <PropertyRef Name="IdTema" />
+    </Key>
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoTema" Type="Int16" Nullable="false" />
+    <Property Name="IdSeccion" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadComentario" Type="Int16" Nullable="false" />
+    <Property Name="CantidadRespuesta" Type="Int16" Nullable="false" />
+    <Property Name="ScoreObtenido" Type="Int16" Nullable="false" />
+    <Property Name="CantidadVista" Type="Int16" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioEstadoPor" Type="Int16" Nullable="false" />
+    <Property Name="FechaEstadoPor" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreEstadoPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FlagTema" Type="Byte" Nullable="false" />
+    <Property Name="IdUsuarioFlagPor" Type="Int16" Nullable="false" />
+    <Property Name="FechaFlagPor" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreFlagPor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Byte" Nullable="false" />
+    <Property Name="NombreUsuarioCreador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="NombreUsuarioModificador" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Tag1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tags" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VisitanteIP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CantidadEdicion" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="ComentarioTema" Relationship="Self.FK_Tema_ComentarioTema" FromRole="Tema" ToRole="ComentarioTema" />
+    <NavigationProperty Name="LogActividad" Relationship="Self.FK_Tema_Log" FromRole="Tema" ToRole="LogActividad" />
+    <NavigationProperty Name="Respuesta" Relationship="Self.FK_Tema_Respuesta" FromRole="Tema" ToRole="Respuesta" />
+    <NavigationProperty Name="Seccion" Relationship="Self.FK_Seccion_Tema" FromRole="Tema" ToRole="Seccion" />
+    <NavigationProperty Name="TemaContenido" Relationship="Self.FK_Tema_TemaContenido" FromRole="Tema" ToRole="TemaContenido" />
+    <NavigationProperty Name="TemaEdicion" Relationship="Self.FK_Tema_TemaEdicion" FromRole="Tema" ToRole="TemaEdicion" />
+    <NavigationProperty Name="ValoracionTema" Relationship="Self.FK_Tema_ValoracionTema" FromRole="Tema" ToRole="ValoracionTema" />
+    <NavigationProperty Name="TipoTema" Relationship="Self.FK_TipoTema_Tema" FromRole="Tema" ToRole="TipoTema" />
+  </EntityType>
+  <EntityType Name="TemaContenido">
+    <Key>
+      <PropertyRef Name="IdTemaContenido" />
+    </Key>
+    <Property Name="IdTemaContenido" Type="Int32" Nullable="false" />
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContenidoHtml" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_TemaContenido" FromRole="TemaContenido" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="TemaEdicion">
+    <Key>
+      <PropertyRef Name="IdTemaEdicion" />
+    </Key>
+    <Property Name="IdTemaEdicion" Type="Int32" Nullable="false" />
+    <Property Name="IdTema" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContenidoHTML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Tag1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tag5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tags" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ResumenEdicion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_TemaEdicion" FromRole="TemaEdicion" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="TipoSeccion">
+    <Key>
+      <PropertyRef Name="IdTipoSeccion" />
+    </Key>
+    <Property Name="IdTipoSeccion" Type="Int16" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioModificador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Seccion" Relationship="Self.FK_TipoSeccion_Seccion" FromRole="TipoSeccion" ToRole="Seccion" />
+  </EntityType>
+  <EntityType Name="TipoTema">
+    <Key>
+      <PropertyRef Name="IdTipoTema" />
+    </Key>
+    <Property Name="IdTipoTema" Type="Int16" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="Int16" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_TipoTema_Tema" FromRole="TipoTema" ToRole="Tema" />
+  </EntityType>
+  <EntityType Name="ValoracionRespuesta">
+    <Key>
+      <PropertyRef Name="IdValoracionRespuesta" />
+    </Key>
+    <Property Name="IdValoracionRespuesta" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Byte" Nullable="false" />
+    <Property Name="TipoMarca" Type="Byte" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdRespuesta" Type="Int32" />
+    <NavigationProperty Name="Respuesta" Relationship="Self.FK_Repuesta_ValoracionRespuesta" FromRole="ValoracionRespuesta" ToRole="Respuesta" />
+  </EntityType>
+  <EntityType Name="ValoracionTema">
+    <Key>
+      <PropertyRef Name="IdValoracionTema" />
+    </Key>
+    <Property Name="IdValoracionTema" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Byte" Nullable="false" />
+    <Property Name="TipoMarca" Type="Byte" Nullable="false" />
+    <Property Name="IdUsuarioCreador" Type="Int16" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdTema" Type="Int32" />
+    <NavigationProperty Name="Tema" Relationship="Self.FK_Tema_ValoracionTema" FromRole="ValoracionTema" ToRole="Tema" />
+  </EntityType>
+  <Association Name="FK_Modulo_AccesoModulo">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="1" />
+    <End Role="AccesoSeccion" Type="Self.AccesoSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="AccesoSeccion">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_AccesoModulo">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="AccesoSeccion" Type="Self.AccesoSeccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="AccesoSeccion">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_ComentarioRespuesta">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+    <End Role="ComentarioRespuesta" Type="Self.ComentarioRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="ComentarioRespuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_ComentarioTema">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="ComentarioTema" Type="Self.ComentarioTema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="ComentarioTema">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Log">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="0..1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Log">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Sistema_Log">
+    <End Role="RolSistemaCompany" Type="Self.RolSistemaCompany" Multiplicity="1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistemaCompany">
+        <PropertyRef Name="IdRolSisCompany" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdRolSisCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_Log">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="0..1" />
+    <End Role="LogActividad" Type="Self.LogActividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="LogActividad">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Repuesta_ValoracionRespuesta">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="0..1" />
+    <End Role="ValoracionRespuesta" Type="Self.ValoracionRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="ValoracionRespuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuesta_RespuestaContenido">
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="1" />
+    <End Role="RespuestaContenido" Type="Self.RespuestaContenido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Respuesta">
+        <PropertyRef Name="IdRespuesta" />
+      </Principal>
+      <Dependent Role="RespuestaContenido">
+        <PropertyRef Name="IdRespuesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_Respuesta">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="Respuesta" Type="Self.Respuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="Respuesta">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Company">
+    <End Role="RolSistema" Type="Self.RolSistema" Multiplicity="1" />
+    <End Role="RolSistemaCompany" Type="Self.RolSistemaCompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RolSistema">
+        <PropertyRef Name="IdRolSistema" />
+      </Principal>
+      <Dependent Role="RolSistemaCompany">
+        <PropertyRef Name="IdRolSistema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Seccion_Tema">
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="1" />
+    <End Role="Tema" Type="Self.Tema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Seccion">
+        <PropertyRef Name="IdSeccion" />
+      </Principal>
+      <Dependent Role="Tema">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoSeccion_Seccion">
+    <End Role="TipoSeccion" Type="Self.TipoSeccion" Multiplicity="0..1" />
+    <End Role="Seccion" Type="Self.Seccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSeccion">
+        <PropertyRef Name="IdTipoSeccion" />
+      </Principal>
+      <Dependent Role="Seccion">
+        <PropertyRef Name="IdTipoSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_TemaContenido">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="TemaContenido" Type="Self.TemaContenido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="TemaContenido">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_TemaEdicion">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="1" />
+    <End Role="TemaEdicion" Type="Self.TemaEdicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="TemaEdicion">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tema_ValoracionTema">
+    <End Role="Tema" Type="Self.Tema" Multiplicity="0..1" />
+    <End Role="ValoracionTema" Type="Self.ValoracionTema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tema">
+        <PropertyRef Name="IdTema" />
+      </Principal>
+      <Dependent Role="ValoracionTema">
+        <PropertyRef Name="IdTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoTema_Tema">
+    <End Role="TipoTema" Type="Self.TipoTema" Multiplicity="1" />
+    <End Role="Tema" Type="Self.Tema" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTema">
+        <PropertyRef Name="IdTipoTema" />
+      </Principal>
+      <Dependent Role="Tema">
+        <PropertyRef Name="IdTipoTema" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SalesERPDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccesoSeccion" EntityType="Self.AccesoSeccion" />
+    <EntitySet Name="ComentarioRespuesta" EntityType="Self.ComentarioRespuesta" />
+    <EntitySet Name="ComentarioTema" EntityType="Self.ComentarioTema" />
+    <EntitySet Name="LogActividad" EntityType="Self.LogActividad" />
+    <EntitySet Name="Respuesta" EntityType="Self.Respuesta" />
+    <EntitySet Name="RespuestaContenido" EntityType="Self.RespuestaContenido" />
+    <EntitySet Name="RolSistema" EntityType="Self.RolSistema" />
+    <EntitySet Name="RolSistemaCompany" EntityType="Self.RolSistemaCompany" />
+    <EntitySet Name="Seccion" EntityType="Self.Seccion" />
+    <EntitySet Name="Tema" EntityType="Self.Tema" />
+    <EntitySet Name="TemaContenido" EntityType="Self.TemaContenido" />
+    <EntitySet Name="TemaEdicion" EntityType="Self.TemaEdicion" />
+    <EntitySet Name="TipoSeccion" EntityType="Self.TipoSeccion" />
+    <EntitySet Name="TipoTema" EntityType="Self.TipoTema" />
+    <EntitySet Name="ValoracionRespuesta" EntityType="Self.ValoracionRespuesta" />
+    <EntitySet Name="ValoracionTema" EntityType="Self.ValoracionTema" />
+    <AssociationSet Name="FK_Modulo_AccesoModulo" Association="Self.FK_Modulo_AccesoModulo">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="AccesoSeccion" EntitySet="AccesoSeccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_AccesoModulo" Association="Self.FK_Rol_AccesoModulo">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="AccesoSeccion" EntitySet="AccesoSeccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_ComentarioRespuesta" Association="Self.FK_Respuesta_ComentarioRespuesta">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="ComentarioRespuesta" EntitySet="ComentarioRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_ComentarioTema" Association="Self.FK_Tema_ComentarioTema">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="ComentarioTema" EntitySet="ComentarioTema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Log" Association="Self.FK_Modulo_Log">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Log" Association="Self.FK_Rol_Log">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Sistema_Log" Association="Self.FK_Rol_Sistema_Log">
+      <End Role="RolSistemaCompany" EntitySet="RolSistemaCompany" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_Log" Association="Self.FK_Tema_Log">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="LogActividad" EntitySet="LogActividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Repuesta_ValoracionRespuesta" Association="Self.FK_Repuesta_ValoracionRespuesta">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="ValoracionRespuesta" EntitySet="ValoracionRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuesta_RespuestaContenido" Association="Self.FK_Respuesta_RespuestaContenido">
+      <End Role="Respuesta" EntitySet="Respuesta" />
+      <End Role="RespuestaContenido" EntitySet="RespuestaContenido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_Respuesta" Association="Self.FK_Tema_Respuesta">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="Respuesta" EntitySet="Respuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Company" Association="Self.FK_Rol_Company">
+      <End Role="RolSistema" EntitySet="RolSistema" />
+      <End Role="RolSistemaCompany" EntitySet="RolSistemaCompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Seccion_Tema" Association="Self.FK_Seccion_Tema">
+      <End Role="Seccion" EntitySet="Seccion" />
+      <End Role="Tema" EntitySet="Tema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoSeccion_Seccion" Association="Self.FK_TipoSeccion_Seccion">
+      <End Role="TipoSeccion" EntitySet="TipoSeccion" />
+      <End Role="Seccion" EntitySet="Seccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_TemaContenido" Association="Self.FK_Tema_TemaContenido">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="TemaContenido" EntitySet="TemaContenido" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_TemaEdicion" Association="Self.FK_Tema_TemaEdicion">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="TemaEdicion" EntitySet="TemaEdicion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tema_ValoracionTema" Association="Self.FK_Tema_ValoracionTema">
+      <End Role="Tema" EntitySet="Tema" />
+      <End Role="ValoracionTema" EntitySet="ValoracionTema" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoTema_Tema" Association="Self.FK_TipoTema_Tema">
+      <End Role="TipoTema" EntitySet="TipoTema" />
+      <End Role="Tema" EntitySet="Tema" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

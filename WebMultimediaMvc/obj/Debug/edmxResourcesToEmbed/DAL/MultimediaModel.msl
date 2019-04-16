@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SalesERPDBModelStoreContainer" CdmEntityContainer="SalesERPDBEntities">
+    <EntitySetMapping Name="AccesoSeccion">
+      <EntityTypeMapping TypeName="SalesERPDBModel.AccesoSeccion">
+        <MappingFragment StoreEntitySet="AccesoSeccion">
+          <ScalarProperty Name="IdAccesoSeccion" ColumnName="IdAccesoSeccion" />
+          <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioModificador" ColumnName="UsuarioModificador" />
+          <ScalarProperty Name="Acceso" ColumnName="Acceso" />
+          <ScalarProperty Name="Crear" ColumnName="Crear" />
+          <ScalarProperty Name="Marcado" ColumnName="Marcado" />
+          <ScalarProperty Name="Edicion" ColumnName="Edicion" />
+          <ScalarProperty Name="Desactivado" ColumnName="Desactivado" />
+          <ScalarProperty Name="IdRolSistema" ColumnName="IdRolSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComentarioRespuesta">
+      <EntityTypeMapping TypeName="SalesERPDBModel.ComentarioRespuesta">
+        <MappingFragment StoreEntitySet="ComentarioRespuesta">
+          <ScalarProperty Name="IdComentarioRespuesta" ColumnName="IdComentarioRespuesta" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ScoreObtenido" ColumnName="ScoreObtenido" />
+          <ScalarProperty Name="ComentarioTexto" ColumnName="ComentarioTexto" />
+          <ScalarProperty Name="ComentarioTextoHtml" ColumnName="ComentarioTextoHtml" />
+          <ScalarProperty Name="CantidadEdicion" ColumnName="CantidadEdicion" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NombreUsuarioCreador" ColumnName="NombreUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="NombreUsuarioModificador" ColumnName="NombreUsuarioModificador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComentarioTema">
+      <EntityTypeMapping TypeName="SalesERPDBModel.ComentarioTema">
+        <MappingFragment StoreEntitySet="ComentarioTema">
+          <ScalarProperty Name="IdComentario" ColumnName="IdComentario" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="ComentarioTexto" ColumnName="ComentarioTexto" />
+          <ScalarProperty Name="ComentarioTextoHtml" ColumnName="ComentarioTextoHtml" />
+          <ScalarProperty Name="ScoreObtenido" ColumnName="ScoreObtenido" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NombreUsuarioCreador" ColumnName="NombreUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="NombreUsuarioModificador" ColumnName="NombreUsuarioModificador" />
+          <ScalarProperty Name="CantidadEdicion" ColumnName="CantidadEdicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogActividad">
+      <EntityTypeMapping TypeName="SalesERPDBModel.LogActividad">
+        <MappingFragment StoreEntitySet="LogActividad">
+          <ScalarProperty Name="IdLogActividad" ColumnName="IdLogActividad" />
+          <ScalarProperty Name="IdRolSistema" ColumnName="IdRolSistema" />
+          <ScalarProperty Name="IdRolSisCompany" ColumnName="IdRolSisCompany" />
+          <ScalarProperty Name="NombreModulo" ColumnName="NombreModulo" />
+          <ScalarProperty Name="NombrePagina" ColumnName="NombrePagina" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Respuesta">
+      <EntityTypeMapping TypeName="SalesERPDBModel.Respuesta">
+        <MappingFragment StoreEntitySet="Respuesta">
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NombreUsuarioCreador" ColumnName="NombreUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="NombreUsuarioModificador" ColumnName="NombreUsuarioModificador" />
+          <ScalarProperty Name="FlagRespuesta" ColumnName="FlagRespuesta" />
+          <ScalarProperty Name="UsuarioFlagPor" ColumnName="UsuarioFlagPor" />
+          <ScalarProperty Name="FechaFlagPor" ColumnName="FechaFlagPor" />
+          <ScalarProperty Name="NombreFlagPor" ColumnName="NombreFlagPor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="UsuarioEstadoPor" ColumnName="UsuarioEstadoPor" />
+          <ScalarProperty Name="FechaEstadoPor" ColumnName="FechaEstadoPor" />
+          <ScalarProperty Name="NombreEstadoPor" ColumnName="NombreEstadoPor" />
+          <ScalarProperty Name="CantidadVista" ColumnName="CantidadVista" />
+          <ScalarProperty Name="ScoreObtenido" ColumnName="ScoreObtenido" />
+          <ScalarProperty Name="CantidadComentario" ColumnName="CantidadComentario" />
+          <ScalarProperty Name="ResumenEdicion" ColumnName="ResumenEdicion" />
+          <ScalarProperty Name="VisitanteIP" ColumnName="VisitanteIP" />
+          <ScalarProperty Name="CantidadEdicion" ColumnName="CantidadEdicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RespuestaContenido">
+      <EntityTypeMapping TypeName="SalesERPDBModel.RespuestaContenido">
+        <MappingFragment StoreEntitySet="RespuestaContenido">
+          <ScalarProperty Name="IdRespuestaContenido" ColumnName="IdRespuestaContenido" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="ContenidHtml" ColumnName="ContenidHtml" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolSistema">
+      <EntityTypeMapping TypeName="SalesERPDBModel.RolSistema">
+        <MappingFragment StoreEntitySet="RolSistema">
+          <ScalarProperty Name="IdRolSistema" ColumnName="IdRolSistema" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="EsBase" ColumnName="EsBase" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolSistemaCompany">
+      <EntityTypeMapping TypeName="SalesERPDBModel.RolSistemaCompany">
+        <MappingFragment StoreEntitySet="RolSistemaCompany">
+          <ScalarProperty Name="IdRolSisCompany" ColumnName="IdRolSisCompany" />
+          <ScalarProperty Name="IdRolSistema" ColumnName="IdRolSistema" />
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Simbolo" ColumnName="Simbolo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ScoreTotal" ColumnName="ScoreTotal" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seccion">
+      <EntityTypeMapping TypeName="SalesERPDBModel.Seccion">
+        <MappingFragment StoreEntitySet="Seccion">
+          <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdTipoSeccion" ColumnName="IdTipoSeccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tema">
+      <EntityTypeMapping TypeName="SalesERPDBModel.Tema">
+        <MappingFragment StoreEntitySet="Tema">
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="IdTipoTema" ColumnName="IdTipoTema" />
+          <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="CantidadComentario" ColumnName="CantidadComentario" />
+          <ScalarProperty Name="CantidadRespuesta" ColumnName="CantidadRespuesta" />
+          <ScalarProperty Name="ScoreObtenido" ColumnName="ScoreObtenido" />
+          <ScalarProperty Name="CantidadVista" ColumnName="CantidadVista" />
+          <ScalarProperty Name="ResumenEdicion" ColumnName="ResumenEdicion" />
+          <ScalarProperty Name="IdUsuarioEstadoPor" ColumnName="IdUsuarioEstadoPor" />
+          <ScalarProperty Name="FechaEstadoPor" ColumnName="FechaEstadoPor" />
+          <ScalarProperty Name="NombreEstadoPor" ColumnName="NombreEstadoPor" />
+          <ScalarProperty Name="FlagTema" ColumnName="FlagTema" />
+          <ScalarProperty Name="IdUsuarioFlagPor" ColumnName="IdUsuarioFlagPor" />
+          <ScalarProperty Name="FechaFlagPor" ColumnName="FechaFlagPor" />
+          <ScalarProperty Name="NombreFlagPor" ColumnName="NombreFlagPor" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="NombreUsuarioCreador" ColumnName="NombreUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="NombreUsuarioModificador" ColumnName="NombreUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Tag1" ColumnName="Tag1" />
+          <ScalarProperty Name="Tag2" ColumnName="Tag2" />
+          <ScalarProperty Name="Tag3" ColumnName="Tag3" />
+          <ScalarProperty Name="Tag4" ColumnName="Tag4" />
+          <ScalarProperty Name="Tag5" ColumnName="Tag5" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="VisitanteIP" ColumnName="VisitanteIP" />
+          <ScalarProperty Name="CantidadEdicion" ColumnName="CantidadEdicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemaContenido">
+      <EntityTypeMapping TypeName="SalesERPDBModel.TemaContenido">
+        <MappingFragment StoreEntitySet="TemaContenido">
+          <ScalarProperty Name="IdTemaContenido" ColumnName="IdTemaContenido" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="ContenidoHtml" ColumnName="ContenidoHtml" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemaEdicion">
+      <EntityTypeMapping TypeName="SalesERPDBModel.TemaEdicion">
+        <MappingFragment StoreEntitySet="TemaEdicion">
+          <ScalarProperty Name="IdTemaEdicion" ColumnName="IdTemaEdicion" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="ContenidoHTML" ColumnName="ContenidoHTML" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Tag1" ColumnName="Tag1" />
+          <ScalarProperty Name="Tag2" ColumnName="Tag2" />
+          <ScalarProperty Name="Tag3" ColumnName="Tag3" />
+          <ScalarProperty Name="Tag4" ColumnName="Tag4" />
+          <ScalarProperty Name="Tag5" ColumnName="Tag5" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="ResumenEdicion" ColumnName="ResumenEdicion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSeccion">
+      <EntityTypeMapping TypeName="SalesERPDBModel.TipoSeccion">
+        <MappingFragment StoreEntitySet="TipoSeccion">
+          <ScalarProperty Name="IdTipoSeccion" ColumnName="IdTipoSeccion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="IdUsuarioModificador" ColumnName="IdUsuarioModificador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTema">
+      <EntityTypeMapping TypeName="SalesERPDBModel.TipoTema">
+        <MappingFragment StoreEntitySet="TipoTema">
+          <ScalarProperty Name="IdTipoTema" ColumnName="IdTipoTema" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValoracionRespuesta">
+      <EntityTypeMapping TypeName="SalesERPDBModel.ValoracionRespuesta">
+        <MappingFragment StoreEntitySet="ValoracionRespuesta">
+          <ScalarProperty Name="IdValoracionRespuesta" ColumnName="IdValoracionRespuesta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TipoMarca" ColumnName="TipoMarca" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdRespuesta" ColumnName="IdRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValoracionTema">
+      <EntityTypeMapping TypeName="SalesERPDBModel.ValoracionTema">
+        <MappingFragment StoreEntitySet="ValoracionTema">
+          <ScalarProperty Name="IdValoracionTema" ColumnName="IdValoracionTema" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TipoMarca" ColumnName="TipoMarca" />
+          <ScalarProperty Name="IdUsuarioCreador" ColumnName="IdUsuarioCreador" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="IdTema" ColumnName="IdTema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

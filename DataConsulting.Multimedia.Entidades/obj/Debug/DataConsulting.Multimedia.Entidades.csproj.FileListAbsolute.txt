@@ -1,0 +1,8 @@
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\bin\Debug\DataConsulting.Multimedia.Entidades.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\bin\Debug\DataConsulting.Multimedia.Entidades.pdb
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\bin\Debug\DocumentFormat.OpenXml.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\bin\Debug\EntityFramework.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\bin\Debug\EntityFramework.SqlServer.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\obj\Debug\DataConsulting.Multimedia.Entidades.csprojResolveAssemblyReference.cache
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\obj\Debug\DataConsulting.Multimedia.Entidades.dll
+D:\FUENTES\WebMultimediaMvc-20170627T131705Z-001\WebMultimediaMvc\DataConsulting.Multimedia.Entidades\obj\Debug\DataConsulting.Multimedia.Entidades.pdb

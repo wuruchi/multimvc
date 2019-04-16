@@ -1,0 +1,194 @@
+﻿@model WebMultimediaMvc.DAL.Respuesta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Respuesta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagRespuesta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagRespuesta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreFlagPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreFlagPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEstadoPor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEstadoPor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadVista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadVista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScoreObtenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScoreObtenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadComentario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadComentario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResumenEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResumenEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisitanteIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisitanteIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema.Titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdRespuesta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

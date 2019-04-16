@@ -1,0 +1,99 @@
+﻿@model IEnumerable<WebMultimediaMvc.DAL.AccesoSeccion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsuarioModificador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Acceso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Crear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marcado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edicion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desactivado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seccion.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RolSistema.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaModificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsuarioModificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Acceso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Crear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marcado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edicion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desactivado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seccion.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RolSistema.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdAccesoSeccion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdAccesoSeccion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdAccesoSeccion })
+        </td>
+    </tr>
+}
+
+</table>

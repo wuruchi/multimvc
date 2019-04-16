@@ -1,0 +1,120 @@
+﻿@model WebMultimediaMvc.DAL.ComentarioRespuesta
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ComentarioRespuesta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScoreObtenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScoreObtenido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComentarioTexto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComentarioTexto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComentarioTextoHtml)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComentarioTextoHtml)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadEdicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadEdicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioCreador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioCreador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaModificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaModificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuarioModificador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuarioModificador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Respuesta.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Respuesta.Titulo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

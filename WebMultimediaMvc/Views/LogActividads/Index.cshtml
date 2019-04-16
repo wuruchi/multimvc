@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebMultimediaMvc.DAL.LogActividad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreModulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombrePagina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Accion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuarioCreador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seccion.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RolSistema.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RolSistemaCompany.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tema.Titulo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreModulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombrePagina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuarioCreador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seccion.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RolSistema.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RolSistemaCompany.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tema.Titulo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdLogActividad }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdLogActividad }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdLogActividad })
+        </td>
+    </tr>
+}
+
+</table>
